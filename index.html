@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профессиональный Интернет-магазин</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Ассортимент</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#" id="cartBtn">Корзина (<span id="cartCount">0</span>)</a></li>
+                </ul>
+            </nav>
+            <div class="logo">Роза ветров</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="filters">
+            <h3>Фильтры</h3>
+            <label for="category">Категория:</label>
+            <select id="category" onchange="filterProducts()">
+                <option value="all">Все</option>
+                <option value="category1">Категория 1</option>
+                <option value="category2">Категория 2</option>
+            </select>
+        </aside>
+
+        <section class="product-list" id="productList"></section>
+    </main>
+
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Корзина</h2>
+            <div id="cartItems"></div>
+            <button id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <h3>Контакты</h3>
+                <p>Телефон: +7 (000) 000-00-00</p>
+                <p>Email: contact@example.com</p>
+                <p>Адрес: Улица, Город, Страна</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
+
